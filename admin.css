@@ -1,0 +1,105 @@
+/* ============================================================
+   TIENDA EN LÍNEA — admin.css
+   Estilos exclusivos del panel de administración
+   ============================================================ */
+
+.admin-body { background: #F4F5F7; min-height: 100vh; }
+
+/* ─── Navbar Admin ────────────────────────────────────────── */
+.admin-navbar { background: #1A1A1A; box-shadow: 0 2px 8px rgba(0,0,0,0.2); position: sticky; top: 0; z-index: 1000; }
+.admin-nav-inner { max-width: 1400px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 32px; }
+.admin-logo { display: flex; align-items: center; gap: 8px; color: #F5C518; font-weight: 800; font-size: 18px; white-space: nowrap; }
+.admin-nav-links { display: flex; list-style: none; gap: 4px; flex: 1; }
+.admin-nav-links a { color: rgba(255,255,255,0.75); padding: 8px 14px; border-radius: 6px; font-size: 14px; transition: all 0.2s; white-space: nowrap; }
+.admin-nav-links a:hover, .admin-nav-links a.activo { color: #F5C518; background: rgba(255,255,255,0.07); }
+.admin-user-info { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.7); font-size: 13px; white-space: nowrap; }
+
+/* ─── Layout Admin ────────────────────────────────────────── */
+.admin-contenedor { max-width: 1400px; margin: 0 auto; padding: 28px 24px; }
+.admin-titulo { font-size: 24px; font-weight: 800; margin-bottom: 24px; color: #1A1A1A; }
+.admin-page-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.admin-page-header .admin-titulo { margin-bottom: 0; }
+
+/* ─── Cards ───────────────────────────────────────────────── */
+.admin-card { background: white; border-radius: 10px; padding: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); margin-bottom: 20px; }
+.admin-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.admin-card-header h3 { font-size: 16px; font-weight: 700; }
+.admin-dos-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+.admin-dos-col-asimetrico { display: grid; grid-template-columns: 1fr 380px; gap: 20px; align-items: start; }
+
+/* ─── KPIs ────────────────────────────────────────────────── */
+.kpi-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-bottom: 20px; }
+.kpi-card { background: white; border-radius: 10px; padding: 20px; display: flex; align-items: center; gap: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+.kpi-card.kpi-alerta { border-left: 4px solid #F39C12; }
+.kpi-icono { width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+.kpi-amarillo { background: #fff9e6; }
+.kpi-azul    { background: #dbeeff; }
+.kpi-naranja { background: #fff3cd; }
+.kpi-verde   { background: #e8f8ee; }
+.kpi-valor   { display: block; font-size: 26px; font-weight: 800; line-height: 1.1; }
+.kpi-label   { display: block; font-size: 12px; color: #666; margin-top: 2px; }
+
+.estados-resumen { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+.estado-mini-card { background: white; border-radius: 8px; padding: 12px 18px; display: flex; align-items: center; gap: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); text-decoration: none; transition: box-shadow 0.2s; }
+.estado-mini-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.estado-mini-num { font-size: 20px; font-weight: 800; color: #1A1A1A; }
+
+/* ─── Tablas ──────────────────────────────────────────────── */
+.admin-tabla { width: 100%; border-collapse: collapse; font-size: 14px; }
+.admin-tabla th { background: #1A1A1A; color: white; padding: 10px 14px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+.admin-tabla td { padding: 12px 14px; border-bottom: 1px solid #F2F2F2; vertical-align: middle; }
+.admin-tabla tr:last-child td { border-bottom: none; }
+.admin-tabla tr:hover td { background: #FAFAFA; }
+.admin-tabla-full { min-width: 700px; }
+.tabla-img { width: 48px; height: 48px; object-fit: cover; border-radius: 6px; background: #F2F2F2; }
+
+.acciones-col { display: flex; gap: 6px; flex-wrap: wrap; white-space: nowrap; }
+.sin-datos { text-align: center; color: #888; padding: 24px; font-size: 14px; }
+.stock-alerta { color: #E74C3C; font-weight: 700; }
+
+/* ─── Filtros rápidos ─────────────────────────────────────── */
+.admin-filtros-rapidos { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.btn-filtro-rapido { padding: 7px 16px; border-radius: 20px; background: white; border: 1.5px solid #E0E0E0; font-size: 13px; font-weight: 600; color: #555; transition: all 0.2s; cursor: pointer; }
+.btn-filtro-rapido:hover { border-color: #1A1A1A; color: #1A1A1A; }
+.btn-filtro-rapido.activo { background: #1A1A1A; color: #F5C518; border-color: #1A1A1A; }
+
+/* ─── Formulario de producto ──────────────────────────────── */
+.preview-imagenes { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.preview-img { width: 80px; height: 80px; object-fit: cover; border-radius: 6px; border: 2px solid #E0E0E0; }
+.preview-logo { width: 80px; height: 80px; object-fit: contain; border: 1px solid #E0E0E0; border-radius: 6px; padding: 4px; }
+.logo-actual { margin-bottom: 10px; }
+
+.imagenes-actuales { display: flex; flex-wrap: wrap; gap: 10px; }
+.img-actual-item { position: relative; }
+.img-actual-item img { width: 80px; height: 80px; object-fit: cover; border-radius: 6px; }
+.badge-principal { position: absolute; bottom: 0; left: 0; right: 0; background: #1A1A1A; color: #F5C518; font-size: 9px; text-align: center; padding: 2px; border-radius: 0 0 6px 6px; font-weight: 700; }
+.btn-eliminar-img { position: absolute; top: -6px; right: -6px; width: 20px; height: 20px; border-radius: 50%; background: #E74C3C; color: white; border: none; font-size: 10px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+
+.talla-nueva-fila { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+.talla-nueva-fila input { width: auto !important; }
+.form-agregar-talla { display: flex; gap: 8px; align-items: center; margin-top: 12px; padding-top: 12px; border-top: 1px solid #F2F2F2; }
+.form-agregar-talla input { max-width: 120px; }
+
+/* ─── Detalle de pedido ───────────────────────────────────── */
+.info-grid { display: flex; flex-direction: column; gap: 12px; }
+.info-item { display: flex; flex-direction: column; gap: 2px; }
+.info-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.estado-actual { margin-bottom: 16px; }
+
+.form-cambio-estado { margin-top: 16px; }
+.resumen-item-info { flex: 1; }
+.resumen-item-info p { font-size: 13px; }
+.resumen-item-precio { text-align: right; white-space: nowrap; }
+.resumen-item-precio p { font-size: 13px; color: #666; }
+.texto-descuento { font-size: 12px; color: #27AE60; }
+
+/* ─── Responsive Admin ────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .kpi-grid { grid-template-columns: repeat(2,1fr); }
+  .admin-dos-col, .admin-dos-col-asimetrico { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .admin-nav-links { display: none; }
+  .kpi-grid { grid-template-columns: repeat(2,1fr); }
+  .admin-contenedor { padding: 16px; }
+}
